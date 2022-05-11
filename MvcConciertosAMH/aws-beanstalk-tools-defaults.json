@@ -1,0 +1,20 @@
+
+{
+    "region" : "us-east-1",
+    "configuration" : "Debug",
+    "framework"     : "net5.0",
+    "self-contained" : false,
+    "application"    : "MvcConciertosAMH",
+    "environment"    : "MvcConciertosAMH-dev",
+    "enable-xray"    : false,
+    "enhanced-health-type" : "basic",
+    "additional-options"   : "\"aws:autoscaling:launchconfiguration,SecurityGroups\"=\"sg-06e934a4a1e3d4a27\";\"aws:ec2:vpc,Subnets\"=\"subnet-00ff328cc4f2407c7\"",
+    "solution-stack"       : "64bit Amazon Linux 2 v2.3.1 running .NET Core",
+    "environment-type"     : "SingleInstance",
+    "cname"                : "mvcconciertosamh-dev",
+    "instance-type"        : "t2.micro",
+    "key-pair"             : "par-claves-aula-tajamar",
+    "instance-profile"     : "role-allow-ec2-rds",
+    "service-role"         : "aws-elasticbeanstalk-service-role",
+    "proxy-server"         : "nginx"
+}

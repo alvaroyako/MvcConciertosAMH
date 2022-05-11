@@ -1,0 +1,29 @@
+﻿@model IEnumerable<MvcConciertosAMH.Models.Categoria>
+
+@{
+    ViewData["Title"] = "Categorias";
+}
+
+<h1>Categorias</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                <a asp-controller="Conciertos" asp-action="EventosPorCategoria" asp-route-idcategoria="@item.IdCategoria">@item.Nombre</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
